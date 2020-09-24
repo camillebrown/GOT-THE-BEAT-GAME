@@ -1,0 +1,71 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.3fr 1.4fr;
+    grid-template-rows: 200px 1150px;
+    gap: 1px 1px;
+    grid-template-areas:
+      "home welcome"
+      "round-x game";
+}
+
+.round-x {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1.7fr;
+    gap: 1px 1px;
+    grid-template-areas:
+      "."
+      "current-score";
+    grid-area: round x;
+    border: 3px solid black;
+}
+
+.current-score {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr 0.5fr;
+    gap: 1px 1px;
+    grid-template-areas:
+      "."
+      "round-scores"
+      "restart";
+    grid-area: current-score;
+    border: 1px solid red;
+}
+
+.restart {
+    grid-area: restart;
+    border: 1px solid red;
+}
+
+.round-scores {
+    grid-area: round-scores;
+    border: 1px solid red;
+}
+
+.home {
+    grid-area: home;
+    border: 3px solid black;
+}
+
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 1.4fr;
+    gap: 1px 1px;
+    grid-template-areas:
+      "."
+      "header";
+    grid-area: welcome;
+    border: 3px solid black;
+}
+
+.header {
+    grid-area: header;
+    border: 1px solid red;
+}
+
+.game {
+    grid-area: game;
+    border: 1px solid red;
+}

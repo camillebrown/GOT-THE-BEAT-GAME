@@ -69,3 +69,41 @@
     grid-area: game;
     border: 1px solid red;
 }
+
+.choice-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 4px;
+    background: #009ACD;
+    font-size: 20px;
+    min-width: 80px;
+    transition: all .2s ease-in-out;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 5px 0px #2E86C1;
+    background: #00CED1;
+    transform: scale(1.05);
+}
+
+.choice-letter {
+    padding: 5px 25px;
+    color: darkblue;
+    font-size: 35px;
+}
+
+.choice-text {
+    width: 100%;
+    color: white;
+    font-size: 35px;
+}
+
+h1{
+    text-align: center;
+    margin: 50px;
+    font-size: 65px;
+}

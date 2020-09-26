@@ -38,4 +38,4 @@
 10. If an answer has been selected by the player, prevent the player from making another choice
 11. If an answer has been selected before time runs out, stop the clock
 12. SetTimeout before moving on to the next question (reset the clock)
-13. Show player their score at the end of the round
+13. Show player their score at the end of each round

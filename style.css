@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 .grid-container {
     display: grid;
     grid-template-columns: 0.3fr 1.4fr;
@@ -85,20 +87,23 @@
 
 .choice-letter {
     padding: 5px 25px;
-    color: darkblue;
+    color: white;
     font-size: 35px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .choice-text {
     width: 100%;
     color: white;
     font-size: 35px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 h1{
     text-align: center;
     margin: 50px;
     font-size: 65px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .correct{

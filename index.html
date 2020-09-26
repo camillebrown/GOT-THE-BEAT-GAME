@@ -10,11 +10,24 @@
     <div class="grid-container">
         <div class="round-x">
             <h3>Welcome to Round 1</h3>
+            <div class="current-time">
+                <p>
+                    Time Remaining
+                </p>
+                <h2 id="time">
+                      20
+                </h2>
+              </div>
           <div class="current-score">
-              <h3>Current Score</h3>
-            <div class="restart">Restart</div>
+              <p>
+                  Current Score
+              </p>
+              <h2 id="scoring">
+                    0
+              </h2>
+            </div>
             <div class="round-scores">Round 1, Round 2, etc</div>
-          </div>
+            <div class="restart">Restart</div>
         </div>
         <div class="home">HOME</div>
         <div class="welcome">
@@ -22,22 +35,23 @@
           <div class="header">GOT THE BEAT!</div>
         </div>
         <div class="game">
+            <div class="question-number"></div>
             <h1 id="question">What is the answer to this question?</h1>
             <div class="choice-container">
                 <p class="choice-letter">A</p>
-                <div class="choice-text" data-number='1'>Option 1</div>
+                <div class="choice-text" id='1'>Option 1</div>
             </div>
             <div class="choice-container">
                 <p class="choice-letter">B</p>
-                <div class="choice-text" data-number='2'>Option 2</div>
+                <div class="choice-text" id='2'>Option 2</div>
             </div>
             <div class="choice-container">
                 <p class="choice-letter">C</p>
-                <div class="choice-text" data-number='3'>Option 3</div>
+                <div class="choice-text" id='3'>Option 3</div>
             </div>
             <div class="choice-container">
                 <p class="choice-letter">D</p>
-                <div class="choice-text" data-number='4'>Option 4</div>
+                <div class="choice-text" id='4'>Option 4</div>
             </div>
         </div>
       </div>

@@ -11,12 +11,23 @@ let availableQuestions = []
 const score_points = 1
 const max_questions = 10
 
+document.addEventListener('DOMContentLoaded', () => {
+    //might need to change this to when start button is clicked
+    //begin the question spin
+
+});
+
+question.addEventListener('transitionend', ()=>{
+    //begin the clock countdown for the question to be answered
+})
+
+
 //Start out with your questions
 // Make an array of objects with all of the questions, answer options and the correct answer
 //==============ROUND 1: GUESS THE ARTIST===========//
 const round1Qs = [
     {
-        question:'Which artist wrote the song "Californication"?',
+        question:'\n "Californication"',
         option1: 'Red Hot Chili Peppers',
         option2: 'Foo Fighters',
         option3: 'AC/DC',
@@ -24,23 +35,23 @@ const round1Qs = [
         correctAnswer: 1,
     },
     {
-        question:'Which artist wrote the song "Stir Fry"?',
+        question:'\n "Stir Fry"',
         option1: 'Trippie Red',
-        option2: 'Biggie Smalls',
+        option2: 'Future',
         option3: 'Migos',
         option4: '2 Chainz',
         correctAnswer: 3,
     },
     {
-        question:'Which artist wrote the song "California Love"?',
-        option1: 'Future',
-        option2: 'Run DMC',
+        question:'\n "California Love"',
+        option1: 'Nas',
+        option2: 'Biggie Smalls',
         option3: 'Jay-Z',
         option4: 'Tupac',
         correctAnswer: 4,
     },
     {
-        question:'Which artist wrote the song "Jolene"?',
+        question:'\n "Jolene"',
         option1: 'Carrie Underwood',
         option2: 'Shania Twain',
         option3: 'Dolly Parton',
@@ -48,7 +59,7 @@ const round1Qs = [
         correctAnswer: 3,
     },
     {
-        question:'Which artist wrote the song "U Don\'t Have to Call"?',
+        question:'\n "U Don\'t Have to Call"',
         option1: 'Aaliyah',
         option2: 'Usher',
         option3: 'Beyoncé',
@@ -56,7 +67,7 @@ const round1Qs = [
         correctAnswer: 2,
     },
     {
-        question:'Which artist wrote the song "Country Girl(Shake It For Me)"?',
+        question:'\n "Country Girl(Shake It For Me)"',
         option1: 'Keith Urban',
         option2: 'Brad Paisley',
         option3: 'Blake Shelton',
@@ -64,7 +75,7 @@ const round1Qs = [
         correctAnswer: 4,
     },
     {
-        question:'Which artist wrote the song "No Scrubs"?',
+        question:'\n "No Scrubs"',
         option1: 'TLC',
         option2: 'Destiny\'s Child',
         option3: 'SZA',
@@ -72,7 +83,7 @@ const round1Qs = [
         correctAnswer: 1,
     },
     {
-        question:'Which artist wrote the song "Cry Me A River"?',
+        question:'\n "Cry Me A River"',
         option1: 'Robin Thicke',
         option2: 'Justin Timberlake',
         option3: 'Ed Sheeran',
@@ -80,7 +91,7 @@ const round1Qs = [
         correctAnswer: 2,   
     },
     {
-        question:'Which artist wrote the song "Thank U, Next"?',
+        question:'\n"Thank U, Next"',
         option1: 'Bebe Rexha',
         option2: 'Dua Lipa',
         option3: 'Billie Eilish',
@@ -88,7 +99,7 @@ const round1Qs = [
         correctAnswer: 4,   
     },
     {
-        question:'Which artist wrote the song "Stairway to Heaven"?',
+        question:'\n "Stairway to Heaven"',
         option1: 'Pink Floyd',
         option2: 'Rolling Stones',
         option3: 'Led Zeppelin',
@@ -113,8 +124,7 @@ const getNewQuestion = () => {
     questionNum.innerText = `Question ${questionCounter} of ${max_questions}`
     const questionIndex = Math.floor(Math.random()* availableQuestions.length)
     currentQuestion = availableQuestions[questionIndex]
-    console.log(currentQuestion)
-    question.innerText = currentQuestion.question
+    question.innerText = `Which artist performed the song ${currentQuestion.question}?`
     choices.forEach(choice =>{
         let choiceID = parseInt(choice.id)
         if(choiceID === 1){
@@ -129,33 +139,32 @@ const getNewQuestion = () => {
     })
 
     choices.forEach(choice =>{
-        choice.addEventListener('click', e => {
-            if(!acceptingAnswers) return
-            acceptingAnswers = false
-            const selectedChoice = event.target
-            let selectedChoiceID = parseInt(selectedChoice.id)
-            const correctAnswer = currentQuestion.correctAnswer
-            const correctAnswerDIV = document.getElementById(`${correctAnswer}`)
-            if(selectedChoiceID === correctAnswer) {
-                selectedChoice.parentElement.classList.add('correct')
-                score += score_points
-                scoreText.innerText = score
-            } else {
-                selectedChoice.parentElement.classList.add('incorrect')
-                correctAnswerDIV.parentElement.classList.add('correct')
-            }
-    
-            setTimeout(()=>{
-                selectedChoice.parentElement.classList.remove('incorrect')
-                correctAnswerDIV.parentElement.classList.remove('correct')
-                getNewQuestion()
-            },5000)
+        choice.addEventListener('click', e =>{
+        if(!acceptingAnswers) return
+        acceptingAnswers = false
+        const selectedChoice = event.target
+        let selectedChoiceID = parseInt(selectedChoice.id)
+        const correctAnswer = currentQuestion.correctAnswer
+        const correctAnswerDIV = document.getElementById(`${correctAnswer}`)
+        if(selectedChoiceID === correctAnswer) {
+            selectedChoice.parentElement.classList.add('correct')
+            score += score_points
+            scoreText.innerText = score
+        } else {
+            selectedChoice.parentElement.classList.add('incorrect')
+            correctAnswerDIV.parentElement.classList.add('correct')
+        }
+
+        setTimeout(()=>{
+            selectedChoice.parentElement.classList.remove('incorrect')
+            correctAnswerDIV.parentElement.classList.remove('correct')
+            getNewQuestion()
+        },3000)
         })
     })
 
-
-
     availableQuestions.splice(questionIndex, 1)
+    console.log(availableQuestions)
     acceptingAnswers = true
 }
 

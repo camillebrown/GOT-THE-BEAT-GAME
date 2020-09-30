@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    background: black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-size: 65px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+h1{
+    text-align: center;
+    font-size: 95px;
+    margin: 30px;
+    color: #009ACD;
+}
+
+h3{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 45px;
+    color: white;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    /* max-width: 750px; */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+/*
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    justify-content: center;
+    align-items: center;
+}  */
+
+.btn {
+    display: inline-flex;
+    font-size: 25px;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 300px;
+    height: 75px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #009ACD;
+    background: #00008B;
+    border-radius: 6px;
+    font-family: raleway;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: yellow;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px 0px #00008B;
+    transform: scale(1.05);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+i {
+    margin-left: 10px;
+}
+

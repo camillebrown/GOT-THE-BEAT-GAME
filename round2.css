@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    background: black;
+}
 
 .grid-container {
     display: grid;
@@ -17,6 +22,7 @@
     grid-area: round x;
     height: 200px;
     border: 3px solid black;
+    color: white;
 }
 
 .current-score {
@@ -24,23 +30,38 @@
     grid-area: current-score;
     height: 200px;
     border: 1px solid red;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    margin-top: 65px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+#scoring{
+    font-size: 65px;
+    margin-top: 0px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .restart {
     grid-area: restart;
     height: 200px;
     border: 1px solid red;
+    color: white;
 }
 
 .round-scores {
     grid-area: round-scores;
     height: 200px;
     border: 1px solid red;
+    color: white;
 }
 
 .home {
     grid-area: home;
     border: 3px solid black;
+    color: white;
 }
 
 .welcome {
@@ -53,11 +74,13 @@
       "header";
     grid-area: welcome;
     border: 3px solid black;
+    color: white;
 }
 
 .header {
     grid-area: header;
     border: 1px solid red;
+    color: white;
 }
 
 .game {
@@ -104,6 +127,7 @@ h1{
     margin: 50px;
     font-size: 65px;
     font-family: 'Luckiest Guy', cursive;
+    color: white;
 }
 
 .correct{
@@ -119,4 +143,13 @@ h1{
 }
 .incorrect:hover{
     background: red;
+}
+
+.question-number{
+    color: #009ACD;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
 }

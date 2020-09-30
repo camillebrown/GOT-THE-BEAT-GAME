@@ -1,14 +1,19 @@
+//Determine all of the variables you will need in the game
+
 let score = 0
 const question = document.querySelector('#question')
 const choices = Array.from(document.querySelectorAll('.choice-text'))
 const scoreText = document.querySelector('#scoring')
 const questionNum = document.querySelector('.question-number')
+const gameDIV = document.querySelector('.game')
+let correctAnswerDIV = document.querySelector('.correct')
+let incorrectAnswerDIV = document.querySelector('.incorrect')
 
 let currentQuestion = {}
 let acceptingAnswers = true
 let questionCounter = 0
 let availableQuestions = []
-const score_points = 1
+const score_pointsR1 = 1
 const max_questions = 10
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -88,7 +93,7 @@ const round1Qs = [
         option2: 'Justin Timberlake',
         option3: 'Ed Sheeran',
         option4: 'Sam Smith',
-        correctAnswer: 2,   
+        correctAnswer: 2,
     },
     {
         question:'\n"Thank U, Next"',
@@ -96,7 +101,7 @@ const round1Qs = [
         option2: 'Dua Lipa',
         option3: 'Billie Eilish',
         option4: 'Ariana Grande',
-        correctAnswer: 4,   
+        correctAnswer: 4,
     },
     {
         question:'\n "Stairway to Heaven"',
@@ -104,7 +109,7 @@ const round1Qs = [
         option2: 'Rolling Stones',
         option3: 'Led Zeppelin',
         option4: 'Metallica',
-        correctAnswer: 3,   
+        correctAnswer: 3,
     }
 ]
 
@@ -116,9 +121,53 @@ const startGame = () => {
     getNewQuestion()
 }
 
+// const countdown = () => {
+//     let timeLeft = 10
+//     const timeLeftDisplay = document.querySelector('#time')
+
+//     setInterval(()=> {
+//         if(timeLeft < 0 || gameDIV.contains(correctAnswerDIV) || gameDIV.contains(incorrectAnswerDIV)){
+//             clearInterval(timeLeft = -1)
+//             return
+//         }
+//         if (timeLeft === 0){
+//             setTimeout (()=>{
+//                 let timeUp = document.createElement('h2')
+//                 timeUp.style.color = 'red'
+//                 timeUp.innerText = 'TIME\'S UP!!'
+//                 timeUp.style.fontFamily = 'Luckiest Guy'
+//                 timeUp.style.fontSize = '70px'
+//                 timeUp.classList.add('time-up')
+//                 timeUp.style.textAlign = 'center'
+//                 gameDIV.insertBefore(timeUp, gameDIV.children[2]);
+//                 const correctAnswer = currentQuestion.correctAnswer
+//                 const correctAnswerDIV = document.getElementById(`${correctAnswer}`)
+//                 correctAnswerDIV.parentElement.classList.add('correct')
+//                 choices.forEach(choice =>{
+//                     choice.removeEventListener('click', checkAnswer)
+//                 })
+//             },500)
+//             setTimeout(() => {
+//                 const correctAnswer = currentQuestion.correctAnswer
+//                 const correctAnswerDIV = document.getElementById(`${correctAnswer}`)
+//                 correctAnswerDIV.parentElement.classList.remove('correct')
+//                 getNewQuestion()
+//             }, 5000);
+//         }
+//         timeLeftDisplay.innerText = timeLeft
+//         timeLeft -=1
+//     }, 1000)
+// }
+
+
 const getNewQuestion = () => {
+    // let timeUp = document.querySelector('.time-up')
+    // if (gameDIV.contains(timeUp)){
+    //     gameDIV.removeChild(timeUp, gameDIV.children[2]);
+    // }
+    // countdown()
     if (availableQuestions.length === 0 || questionCounter > max_questions) {
-        console.log('finish')
+        stopGame()
     }
     questionCounter++
     questionNum.innerText = `Question ${questionCounter} of ${max_questions}`
@@ -139,33 +188,35 @@ const getNewQuestion = () => {
     })
 
     choices.forEach(choice =>{
-        choice.addEventListener('click', e =>{
-        if(!acceptingAnswers) return
-        acceptingAnswers = false
-        const selectedChoice = event.target
-        let selectedChoiceID = parseInt(selectedChoice.id)
-        const correctAnswer = currentQuestion.correctAnswer
-        const correctAnswerDIV = document.getElementById(`${correctAnswer}`)
-        if(selectedChoiceID === correctAnswer) {
-            selectedChoice.parentElement.classList.add('correct')
-            score += score_points
-            scoreText.innerText = score
-        } else {
-            selectedChoice.parentElement.classList.add('incorrect')
-            correctAnswerDIV.parentElement.classList.add('correct')
-        }
-
-        setTimeout(()=>{
-            selectedChoice.parentElement.classList.remove('incorrect')
-            correctAnswerDIV.parentElement.classList.remove('correct')
-            getNewQuestion()
-        },3000)
-        })
+        choice.addEventListener('click', checkAnswer)
     })
 
     availableQuestions.splice(questionIndex, 1)
     console.log(availableQuestions)
     acceptingAnswers = true
+}
+
+const checkAnswer = () => {
+    if(!acceptingAnswers) return
+    acceptingAnswers === false
+    const selectedChoice = event.target
+    let selectedChoiceID = parseInt(selectedChoice.id)
+    const correctAnswer = currentQuestion.correctAnswer
+    const correctAnswerDIV = document.getElementById(`${correctAnswer}`)
+    if(selectedChoiceID === correctAnswer) {
+        selectedChoice.parentElement.classList.add('correct')
+        score += score_pointsR1
+        scoreText.innerText = score
+    } else {
+        selectedChoice.parentElement.classList.add('incorrect')
+        correctAnswerDIV.parentElement.classList.add('correct')
+    }
+
+    setTimeout(()=>{
+        selectedChoice.parentElement.classList.remove('incorrect')
+        correctAnswerDIV.parentElement.classList.remove('correct')
+        getNewQuestion()
+    },2100)
 }
 
 startGame()

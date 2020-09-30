@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Got the Beat!</title>
     <link rel="stylesheet" href="round1.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
 <body>
     <div class="grid-container">
+        <div class="home">HOME</div>
         <div class="round-x">
-            <h3>Welcome to Round 1</h3>
             <div class="current-time">
                 <p>
                     Time Remaining
@@ -27,9 +29,7 @@
               </h2>
             </div>
             <div class="round-scores">Round 1, Round 2, etc</div>
-            <div class="restart">Restart</div>
         </div>
-        <div class="home">HOME</div>
         <div class="welcome">
             <h4>Let's Play</h4>
           <div class="header">GOT THE BEAT!</div>
@@ -55,6 +55,20 @@
             </div>
         </div>
       </div>
+      <div class="modal-overlay">
+          <div class="modal-window">
+              <div class="modal_titlebar">
+                  <div class="icon"><i class="far fa-times-circle"></i>
+                  </div>
+                  <span class="modal-title">TIME'S UP!</span>
+              </div>
+              <div class="modal-content">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ea nemo alias quia facere impedit dolorum at veniam! Quod veniam eveniet corporis earum exercitationem in voluptate! Nulla beatae necessitatibus saepe.
+              </div>
+              <button class="modal-close">Close</i></button>
+          </div>
+      </div>
     <script src="round1.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>

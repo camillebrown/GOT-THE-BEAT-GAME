@@ -129,7 +129,7 @@ const round2Qs = [
     },
     {
         artist: 'Diana Ross',
-        question:'I\'m coming out, I want the world to know __________',
+        question:'"I\'m coming out, I want the world to know __________"',
         option1: 'Got to let it show',
         option2: 'That I am on a roll',
         option3: 'That it\'s my time to go',
@@ -138,7 +138,7 @@ const round2Qs = [
     },
     {
         artist: 'Queen',
-        question:'Are you gonna let it all hang out? Fat bottomed girls __________',
+        question:'"Are you gonna let it all hang out? Fat bottomed girls __________"',
         option1: 'You are the reason while I smile',
         option2: 'You make my whole wide world go \'round',
         option3: 'You turn my whole world upside down',
@@ -147,7 +147,7 @@ const round2Qs = [
     },
     {
         artist: 'Drake',
-        question:'You used to call me on my cell phone __________',
+        question:'"You used to call me on my cell phone __________"',
         option1: 'Late after I got back home',
         option2: 'Now you never call at all',
         option3: 'Late night when you need my love',
@@ -156,7 +156,7 @@ const round2Qs = [
     },
     {
         artist: 'Katy Perry',
-        question:'You just gotta ignite the light, And let it shine __________',
+        question:'"You just gotta ignite the light, And let it shine __________"',
         option1: 'Just one more night',
         option2: 'Just own the night',
         option3: 'Just take your time',
@@ -165,7 +165,7 @@ const round2Qs = [
     },
     {
         artist: 'Prince',
-        question:'Maybe I\'m just like my father, too bold. Maybe you\'re just like my mother __________',
+        question:'"Maybe I\'m just like my father, too bold. Maybe you\'re just like my mother __________"',
         option1: 'She\'s never told a lie',
         option2: 'She\s always on my mind',
         option3: 'She\s always good and kind',
@@ -174,7 +174,7 @@ const round2Qs = [
     },
     {
         artist: 'Billy Joel',
-        question:'Well, we\'re all in the mood for a melody __________',
+        question:'"Well, we\'re all in the mood for a melody __________"',
         option1: 'And you\'ve got us feelin\' alright',
         option2: 'And you\'ve got us cryin\' tonight',
         option3: 'And you\'ve got us singin\' alright',
@@ -183,7 +183,7 @@ const round2Qs = [
     },
     {
         artist: 'Erykah Badu',
-        question:'So can I get a window seat, __________',
+        question:'"So can I get a window seat, __________"',
         option1: 'I want to be able to see',
         option2: 'Don\'t want nobody next to me',
         option3: 'It is the only way to sleep',
@@ -192,7 +192,7 @@ const round2Qs = [
     },
     {
         artist: 'The Beatles',
-        question:'Yesterday, all my troubles seemed so far away __________',
+        question:'"Yesterday, all my troubles seemed so far away __________"',
         option1: 'Now I can\'t find the words to say',
         option2: 'Now they just won\'t go away',
         option3: 'Now I don\'t know what to say',
@@ -201,7 +201,7 @@ const round2Qs = [
     },
     {
         artist: 'Garth Brooks',
-        question:'Cause I\'ve got friends in low places __________',
+        question:'"Cause I\'ve got friends in low places __________"',
         option1: 'Where the beer is wasted',
         option2: 'Where the bourbon drowns',
         option3: 'Where the whiskey drowns',
@@ -212,83 +212,83 @@ const round2Qs = [
 
 const round3Qs = [
     {
-        question:'"Why are men great til they __________?"',
-        option1: 'forget how to be great',
-        option2: 'gotta be great',
-        option3: 'gotta act great',
-        option4: 'try to regulate',
+        question:'Which band\'s debut album was entitled "Appetite for Destruction"?',
+        option1: 'Aerosmith',
+        option2: 'Guns N\' Roses',
+        option3: 'Nirvana',
+        option4: 'Iron Maiden',
         correctAnswer: 2,
     },
     {
-        question:'I\'m coming out, I want the world to know __________',
-        option1: 'Got to let it show',
-        option2: 'That I am on a roll',
-        option3: 'That it\'s my time to go',
-        option4: 'Got to take it slow',
+        question:'What year did MTV make its debut??',
+        option1: '1981',
+        option2: '1989',
+        option3: '1980',
+        option4: '1995',
         correctAnswer: 1,
     },
     {
-        question:'Are you gonna let it all hang out? Fat bottomed girls __________',
-        option1: 'You are the reason while I smile',
-        option2: 'You make my whole wide world go \'round',
-        option3: 'You turn my whole world upside down',
-        option4: 'You make the rockin\' world go \'round',
+        question:'Who was the first female singer to be inducted into the Rock and Roll Hall of Fame?',
+        option1: 'Etta James',
+        option2: 'Janis Joplin',
+        option3: 'Gladys Knight',
+        option4: 'Aretha Franklin',
         correctAnswer: 4,
     },
     {
-        question:'You used to call me on my cell phone __________',
-        option1: 'Late after I got back home',
-        option2: 'Now you never call at all',
-        option3: 'Late night when you need my love',
-        option4: 'Every day when I was home',
+        question:'The 2017 album “DAMN.” was released by which artist?',
+        option1: 'J Cole',
+        option2: 'Lil Wayne',
+        option3: 'Kendrick Lamar',
+        option4: 'Travis Scott',
         correctAnswer: 3,
     },
     {
-        question:'You just gotta ignite the light, And let it shine __________',
-        option1: 'Just one more night',
-        option2: 'Just own the night',
-        option3: 'Just take your time',
-        option4: 'Just come alive',
+        question:'What band has Patrick Stump as lead vocalist and rhythm guitarist?',
+        option1: 'My Chemical Romance',
+        option2: 'Fall Out Boy',
+        option3: 'Green Day',
+        option4: 'Panic! At the Disco',
         correctAnswer: 2,
     },
     {
-        question:'Maybe I\'m just like my father, too bold. Maybe you\'re just like my mother __________',
-        option1: 'She\'s never told a lie',
-        option2: 'She\s always on my mind',
-        option3: 'She\s always good and kind',
-        option4: 'She\'s never satisfied',
+        question:'Which tireless country singer played the most live shows in the 2000s?',
+        option1: 'Miranda Lambert',
+        option2: 'Eric Church',
+        option3: 'Tim McGraw',
+        option4: 'Kenny Chesney',
         correctAnswer: 4,
     },
     {
-        question:'Well, we\'re all in the mood for a melody __________',
-        option1: 'And you\'ve got us feelin\' alright',
-        option2: 'And you\'ve got us cryin\' tonight',
-        option3: 'And you\'ve got us singin\' alright',
-        option4: 'And you\'ve got us lovin\' tonight',
+        question:'Which singer featured on Mark Ronson’s 2014 number one song “Uptown Funk”?',
+        option1: 'Bruno Mars',
+        option2: 'Adam Levine',
+        option3: 'The Weeknd',
+        option4: 'Shawn Mendes',
         correctAnswer: 1,
     },
     {
-        question:'So can I get a window seat, __________',
-        option1: 'I want to be able to see',
-        option2: 'Don\'t want nobody next to me',
-        option3: 'It is the only way to sleep',
-        option4: 'Don\'t want to have to squeeze',
+        question:'Released in 1998 and becoming a world-wide smash hit, what was Britney’s Spears debut single?',
+        option1: 'Lucky',
+        option2: 'Baby, One More Time',
+        option3: '(You Drive Me) Crazy',
+        option4: 'Oops!... I Did It Again',
         correctAnswer: 2,
     },
     {
-        question:'Yesterday, All my troubles seemed so far away',
-        option1: 'Now I can\'t find the words to say',
-        option2: 'Now they just won\'t go away',
-        option3: 'Now I don\'t know what to say',
-        option4: 'Now it looks as though they\'re here to stay',
+        question:'Which single by Rihanna stayed at the top of the Billboard Hot 100 for the last 8 weeks of 2011?',
+        option1: 'Stay (ft. Mikky Ekko)',
+        option2: 'What\'s My Name',
+        option3: 'Diamonds',
+        option4: 'We Found Love',
         correctAnswer: 4,
     },
     {
-        question:'Cause I\'ve got friends in low places',
-        option1: 'Where the beer is wasted',
-        option2: 'Where the bourbon drowns',
-        option3: 'Where the whiskey drowns',
-        option4: 'Think I\'ll slip on down ',
+        question:'In 2004, who won the Record of the Year Grammy for "Clocks"?',
+        option1: 'Imagine Dragons',
+        option2: 'U2',
+        option3: 'Coldplay',
+        option4: 'The Chainsmokers ',
         correctAnswer: 3,
     }
 ]
@@ -347,7 +347,7 @@ const getNewQuestion = () => {
                 iconSymbol.style.color = '#009ACD'
                 modalTitle.innerText = `ROUND TWO!`
                 modalTitle.style.color = '#009ACD'
-                modalText.innerText = `GREAT JOB! You have ${score} points. \n Ready for Round 2? This round you will be finishing the lyrics of popular songs. You get 30 points for each correct answer.`
+                modalText.innerText = `You have ${score} points. \n Ready for Round 2? This round you will be finishing the lyrics of popular songs. You get 30 points for each correct answer.`
                 modalClose.innerText = 'Let\'s Go!'
                 modalClose.addEventListener('click', ()=>{
                     modal.style.visibility = 'hidden'
@@ -433,7 +433,7 @@ const getNewQuestion = () => {
             setTimeout(()=>{
                 modal.style.visibility = 'visible'
                 modal.style.opacity = '1'
-                iconSymbol.className = 'far fa-edit'
+                iconSymbol.className = 'far fa-question-circle'
                 iconSymbol.style.color = '#009ACD'
                 modalTitle.innerText = `ROUND THREE!`
                 modalTitle.style.color = '#009ACD'

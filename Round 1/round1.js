@@ -6,25 +6,21 @@ const choices = Array.from(document.querySelectorAll('.choice-text'))
 const scoreText = document.querySelector('#scoring')
 const questionNum = document.querySelector('.question-number')
 const gameDIV = document.querySelector('.game')
-let correctAnswerDIV = document.querySelector('.correct')
-let incorrectAnswerDIV = document.querySelector('.incorrect')
+const modal = document.querySelector('.modal-overlay')
+let modalClose = document.querySelector('.modal-close')
+let iconSymbol = document.querySelector('.icon-symbol')
+let modalTitle = document.querySelector('.modal-title')
+let modalText = document.querySelector('.modal-content')
+let modalEnd = document.querySelector('.modal-end')
+
+
 
 let currentQuestion = {}
 let acceptingAnswers = true
 let questionCounter = 0
 let availableQuestions = []
-const score_pointsR1 = 1
+const score_pointsR1 = 10
 const max_questions = 10
-
-document.addEventListener('DOMContentLoaded', () => {
-    //might need to change this to when start button is clicked
-    //begin the question spin
-
-});
-
-question.addEventListener('transitionend', ()=>{
-    //begin the clock countdown for the question to be answered
-})
 
 
 //Start out with your questions
@@ -121,51 +117,8 @@ const startGame = () => {
     getNewQuestion()
 }
 
-// const countdown = () => {
-//     let timeLeft = 10
-//     const timeLeftDisplay = document.querySelector('#time')
-
-//     setInterval(()=> {
-//         if(timeLeft < 0 || gameDIV.contains(correctAnswerDIV) || gameDIV.contains(incorrectAnswerDIV)){
-//             clearInterval(timeLeft = -1)
-//             return
-//         }
-//         if (timeLeft === 0){
-//             setTimeout (()=>{
-//                 let timeUp = document.createElement('h2')
-//                 timeUp.style.color = 'red'
-//                 timeUp.innerText = 'TIME\'S UP!!'
-//                 timeUp.style.fontFamily = 'Luckiest Guy'
-//                 timeUp.style.fontSize = '70px'
-//                 timeUp.classList.add('time-up')
-//                 timeUp.style.textAlign = 'center'
-//                 gameDIV.insertBefore(timeUp, gameDIV.children[2]);
-//                 const correctAnswer = currentQuestion.correctAnswer
-//                 const correctAnswerDIV = document.getElementById(`${correctAnswer}`)
-//                 correctAnswerDIV.parentElement.classList.add('correct')
-//                 choices.forEach(choice =>{
-//                     choice.removeEventListener('click', checkAnswer)
-//                 })
-//             },500)
-//             setTimeout(() => {
-//                 const correctAnswer = currentQuestion.correctAnswer
-//                 const correctAnswerDIV = document.getElementById(`${correctAnswer}`)
-//                 correctAnswerDIV.parentElement.classList.remove('correct')
-//                 getNewQuestion()
-//             }, 5000);
-//         }
-//         timeLeftDisplay.innerText = timeLeft
-//         timeLeft -=1
-//     }, 1000)
-// }
-
 
 const getNewQuestion = () => {
-    // let timeUp = document.querySelector('.time-up')
-    // if (gameDIV.contains(timeUp)){
-    //     gameDIV.removeChild(timeUp, gameDIV.children[2]);
-    // }
-    // countdown()
     if (availableQuestions.length === 0 || questionCounter > max_questions) {
         stopGame()
     }
@@ -192,7 +145,6 @@ const getNewQuestion = () => {
     })
 
     availableQuestions.splice(questionIndex, 1)
-    console.log(availableQuestions)
     acceptingAnswers = true
 }
 
@@ -202,21 +154,64 @@ const checkAnswer = () => {
     const selectedChoice = event.target
     let selectedChoiceID = parseInt(selectedChoice.id)
     const correctAnswer = currentQuestion.correctAnswer
-    const correctAnswerDIV = document.getElementById(`${correctAnswer}`)
     if(selectedChoiceID === correctAnswer) {
-        selectedChoice.parentElement.classList.add('correct')
+        correct()
         score += score_pointsR1
         scoreText.innerText = score
+        return
     } else {
-        selectedChoice.parentElement.classList.add('incorrect')
-        correctAnswerDIV.parentElement.classList.add('correct')
+        incorrect()
     }
+}
 
-    setTimeout(()=>{
-        selectedChoice.parentElement.classList.remove('incorrect')
-        correctAnswerDIV.parentElement.classList.remove('correct')
-        getNewQuestion()
-    },2100)
+const correct = () => {
+    modal.style.visibility = 'visible'
+    modal.style.opacity = '1'
+    iconSymbol.className = 'far fa-check-circle'
+    iconSymbol.style.color = '#32CD32'
+    modalTitle.innerText = 'CORRECT'
+    modalTitle.style.color = '#32CD32'
+    modalText.innerText = 'Great Job! You are right. \n Let\'s go to the next question.'
+    modalClose.addEventListener('click', ()=>{
+        modal.style.visibility = 'hidden'
+        modal.style.opacity = '0'
+    })
+    localStorage.setItem('mostRecentScore', score)
+    setTimeout(getNewQuestion,2000)
+}
+
+const incorrect = () => {
+    modal.style.visibility = 'visible'
+    modal.style.opacity = '1'
+    iconSymbol.className = 'far fa-times-circle'
+    iconSymbol.style.color = 'red'
+    modalTitle.innerText = 'INCORRECT'
+    modalTitle.style.color = 'red'
+    modalText.innerText = 'Better luck next time. \n Let\'s go to the next question.'
+    modalClose.addEventListener('click', ()=>{
+        modal.style.visibility = 'hidden'
+        modal.style.opacity = '0'
+    })
+    setTimeout(getNewQuestion,2000)
 }
 
 startGame()
+
+const stopGame =  () => {
+    localStorage.setItem('mostRecentScore', score)
+    const finalScore = document.querySelector('#finalscore')
+    const mostRecentScore = JSON.parse(localStorage.getItem('mostRecentScore'))
+    finalScore.innerText = mostRecentScore
+    modalEnd.style.visibility = 'visible'
+    modalEnd.style.opacity = '1'
+
+}
+
+let endGameBtn = document.querySelector('#end')
+endGameBtn.addEventListener('click', stopGame)
+
+let startGameBtn = document.querySelector('#start')
+startGameBtn.addEventListener('click', ()=>{
+    window.location = '/Round 1/round1.html'
+})
+

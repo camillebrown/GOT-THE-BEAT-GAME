@@ -1,0 +1,187 @@
+.modal-start{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0.1s, opacity 0.3s ease;
+}
+
+.modal-overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.1s, opacity 0.3s ease;
+}
+
+.modal-end{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.1s, opacity 0.3s ease;
+}
+
+.modal-window {
+    width: 500px;
+    height: 400px;
+    max-width: 500px;
+    background: white;
+    border: 1px solid white;
+    font-size: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    font-family: 'Raleway';
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-titlebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Raleway';
+}
+
+.modal-title{
+    font-weight: bold;
+    font-size: 50px;
+    display: block;
+}
+
+.modal-close {
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: lightgrey;
+    border-radius: 10px;
+    color: #009ACD;
+    font-size: 20px;
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+
+.modal-close:hover {
+    background: #BEBEBE;
+    cursor: pointer;
+}
+.modal-content{
+    text-align: center;
+    padding: 15px;
+    margin-top: 0px;
+    font-size: 25px;
+}
+
+.icon{
+    display: block;
+    font-size: 96px;
+    font-family: 'Raleway';
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.modal-content-start,.modal-header-start{
+    text-align: center;
+    padding: 15px;
+    margin-top: 0px;
+    font-size: 25px;
+}
+
+.modal-content-end{
+    text-align: center;
+    padding: 15px;
+    margin-top: 0px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.modal-window-start,.modal-window-end {
+    width: 700px;
+    height: 600px;
+    max-width: 700px;
+    background: #009ACD;
+    border: 1px solid white;
+    font-size: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Raleway';
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-titlebar-start,.modal-titlebar-end{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Raleway';
+}
+
+.modal-title-start,.modal-title-end{
+    font-weight: bold;
+    font-size: 70px;
+    display: block;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.modal-close-start,.modal-close-end {
+    width: 300px;
+    height: 60px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    color: #009ACD;
+    font-size: 30px;
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+
+.modal-close-start:hover,.modal-close-end:hover {
+    background: #BEBEBE;
+    cursor: pointer;
+}
+
+.how-to {
+    font-weight: bold;
+    color: white;
+}
+
+#finalscore {
+    margin-top: 50px;
+    color: white;
+    font-size: 70px;
+    font-family: 'Luckiest Guy', cursive;
+
+}
+

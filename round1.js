@@ -304,6 +304,8 @@ const startGame = () => {
 //Get a new questions for the round 1Qs after each turn
 const getNewQuestion = () => {
     if (currentRound === 1 && roundStarted === false) {
+        //spread operator: to expand an iterable object into the list of arguments
+        //allows you to avoid loops to iterate through the object and create arguments
         availableQuestions = [...round1Qs]
         roundTitle.innerText = 'Round 1: Guess the Artist'
         questionCounter++
@@ -479,7 +481,7 @@ const getNewQuestion = () => {
             acceptingAnswers = true
             roundStarted = true
         }
-    }  
+    }
     if (currentRound === 3 && roundStarted === false){
         availableQuestions = [...round3Qs]
         console.log(availableQuestions)
@@ -567,7 +569,7 @@ const checkAnswer = () => {
     if(selectedChoiceID === correctAnswer) {
         correct()
         if(currentRound === 1){
-            score += score_pointsR1  
+            score += score_pointsR1
         } else if (currentRound === 2){
             score += score_pointsR2
         } else if (currentRound === 3){
@@ -575,7 +577,7 @@ const checkAnswer = () => {
         }
         scoreText.innerText = score
         return
-    //otherwise run the incorrect function to populate incorrect    
+    //otherwise run the incorrect function to populate incorrect
     } else {
         incorrect()
     }

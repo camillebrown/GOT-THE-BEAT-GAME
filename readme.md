@@ -1,6 +1,6 @@
 # App Title: Got the Beat!
 
-### App Demo: https://camillebrown.github.io/Project1/.
+### App Demo: https://camillebrown.github.io/GOT-THE-BEAT-GAME/.
 
 ---
 
@@ -102,4 +102,4 @@ Day 7: Saturday  | Presentation
 
 I had issues implementing the logic to navigate between rounds of the game and to adjust the group of questions for each round. To fix, I wrote out the user story again for this process and pseudocoded the user story. Then I broke down the conditionals before coding within the conditionals in order to understand the basic logic. I also explained the process to a friend to ensure it made sense to a user before jumping into the code. This made the process to be faster and easier to code.
 
-### App Demo: https://camillebrown.github.io/Project1/.
+### App Demo: https://camillebrown.github.io/GOT-THE-BEAT-GAME/.

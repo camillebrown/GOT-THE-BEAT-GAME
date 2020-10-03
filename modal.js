@@ -13,7 +13,7 @@ const mostRecentScore = JSON.parse(localStorage.getItem('mostRecentScore'))
 finalScore.innerText = mostRecentScore
 
 modalEndBtn.addEventListener('click', ()=>{
-    window.location = '/Round 1/round1.html'
+    window.location = 'index.html'
     modalEnd.style.visibility = 'hidden'
     modalEnd.style.opacity = '0'
     localStorage.setItem('mostRecentScore', 0)

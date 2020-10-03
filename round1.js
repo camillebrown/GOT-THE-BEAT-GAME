@@ -636,5 +636,5 @@ endGameBtn.addEventListener('click', stopGame)
 // Allow user to restart the game using the restart button
 let startGameBtn = document.querySelector('#start')
 startGameBtn.addEventListener('click', ()=>{
-    window.location = '/Round 1/round1.html'
+    window.location = 'index.html'
 })

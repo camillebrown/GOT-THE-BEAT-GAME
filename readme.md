@@ -37,7 +37,7 @@ This will be a trivia game where the user will answer 30 multiple choice questio
 
 #### Wireframe
 
-<img src="https://res.cloudinary.com/davhuurp0/image/upload/v1601736971/sample.jpg" width="80%" >
+<img src="https://res.cloudinary.com/davhuurp0/image/upload/v1601737000/Screen_Shot_2020-10-03_at_7.53.35_AM_fwbuxa.png" width="80%" >
 
 Color Pallet:
 

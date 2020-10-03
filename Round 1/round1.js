@@ -347,7 +347,7 @@ const getNewQuestion = () => {
                 iconSymbol.style.color = '#009ACD'
                 modalTitle.innerText = `ROUND TWO!`
                 modalTitle.style.color = '#009ACD'
-                modalText.innerText = `You have ${score} points. \n Ready for Round 2? This round you will be finishing the lyrics of popular songs. You get 30 points for each correct answer.`
+                modalText.innerText = `You have ${score} points. \n This round you will be finishing the lyrics of popular songs. You get 30 points for each correct answer.`
                 modalClose.innerText = 'Let\'s Go!'
                 modalClose.addEventListener('click', ()=>{
                     modal.style.visibility = 'hidden'
@@ -399,6 +399,7 @@ const getNewQuestion = () => {
         currentQuestion = availableQuestions[questionIndex]
         question.innerText = currentQuestion.question
         let artist = document.createElement('h3')
+        artist.style.marginBottom = '10px'
         artist.innerText = `${currentQuestion.artist} once said...`
         artist.classList.add('artist')
         gameDIV.insertBefore(artist, question);
@@ -437,7 +438,7 @@ const getNewQuestion = () => {
                 iconSymbol.style.color = '#009ACD'
                 modalTitle.innerText = `ROUND THREE!`
                 modalTitle.style.color = '#009ACD'
-                modalText.innerText = `GREAT JOB! You have ${score} points. \n Ready for Round 3? This round you will be answering music trivia questions. You get 50 points for each correct answer.`
+                modalText.innerText = `GREAT JOB! You have ${score} points. \n This round you will be answering music trivia questions. You get 50 points for each correct answer.`
                 modalClose.innerText = 'Let\'s Go!'
                 modalClose.addEventListener('click', ()=>{
                 modal.style.visibility = 'hidden'

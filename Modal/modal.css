@@ -8,8 +8,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
     transition: visibility 0s linear 0.1s, opacity 0.3s ease;
 }
 
@@ -51,7 +51,7 @@
     border: 1px solid white;
     font-size: 16px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    font-family: 'Raleway';
+    font-family: 'Montserrat', sans-serif;
     padding: 10px;
     border-radius: 10px;
     display: flex;
@@ -64,7 +64,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Raleway';
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal-title{
@@ -78,16 +78,16 @@
     height: 40px;
     border: none;
     outline: none;
-    background: lightgrey;
+    background:#3fcece;
     border-radius: 10px;
-    color: #009ACD;
+    color: white;
     font-size: 20px;
-    font-family: 'Raleway';
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
 .modal-close:hover {
-    background: #BEBEBE;
+    background:#009ACD;
     cursor: pointer;
 }
 .modal-content{
@@ -100,7 +100,7 @@
 .icon{
     display: block;
     font-size: 96px;
-    font-family: 'Raleway';
+    font-family: 'Montserrat', sans-serif;
     padding: 10px;
     border-radius: 10px;
     justify-content: center;
@@ -111,6 +111,7 @@
     padding: 15px;
     margin-top: 0px;
     font-size: 25px;
+    color: white;
 }
 
 .modal-content-end{
@@ -126,11 +127,11 @@
     width: 700px;
     height: 600px;
     max-width: 700px;
-    background: #009ACD;
+    background:#2E86C1;
     border: 1px solid white;
     font-size: 16px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    font-family: 'Raleway';
+    font-family: 'Montserrat', sans-serif;
     padding: 10px;
     border-radius: 10px;
     display: flex;
@@ -143,14 +144,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Raleway';
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal-title-start,.modal-title-end{
     font-weight: bold;
     font-size: 70px;
     display: block;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal-close-start,.modal-close-end {
@@ -161,14 +162,14 @@
     margin-top: 20px;
     background: white;
     border-radius: 10px;
-    color: #009ACD;
+    color:#2E86C1;
     font-size: 30px;
-    font-family: 'Raleway';
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
 .modal-close-start:hover,.modal-close-end:hover {
-    background: #BEBEBE;
+    background: #3fcece;
     cursor: pointer;
 }
 
@@ -181,7 +182,6 @@
     margin-top: 50px;
     color: white;
     font-size: 70px;
-    font-family: 'Luckiest Guy', cursive;
-
+    font-family: 'Montserrat', sans-serif;
 }
 

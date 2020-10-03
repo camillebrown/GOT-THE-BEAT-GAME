@@ -1,63 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-body{
-    background: black;
+html,body{
+    padding:0; 
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
 }
-
-
 .grid-container {
     display: grid;
     grid-template-columns: 0.3fr 1.4fr;
-    grid-template-rows: 200px 1150px;
-    gap: 1px 1px;
+    grid-template-rows: 250px 1150px;
     grid-template-areas:
       "home welcome"
+      "round-scores game"
       "round-x game"
       "current-score game"
-      "round-scores game"
       "restart game";  
 }
+/* WELCOME BAR */
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 1.4fr;
+    /* gap: 1px 1px; */
+    grid-template-areas:
+      "."
+      "header";
+    grid-area: welcome;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    background: #f7f7f7;
+    font-size: 35px;
+    justify-items: center;
+    /* margin-top: 15px; */
+}
+
+h4 {
+    margin-top:40px;
+    margin-bottom: 2.5px;
+    color:#3cdaca;
+}
+
+#start {
+    margin-top:100px;
+}
+
+.header {
+    grid-area: header;
+    color: black;
+    font-size: 95px;
+    margin-top: 0px;
+    line-height: 1.6em;
+    /* margin-bottom: 50px; */
+    font-weight: 700;
+}
+
+.welcome:after {
+    content:' ';
+    display: block;
+    border:2px solid black;
+    border-radius:4px;
+    width: 80%;
+    margin: 10px;
+}
+
+/* SIDE PANEL */
 
 #round-x {
     grid-area: round x;
-    color: white;
+    color: black;
     width: 99%;
+    height: 100%;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 30px;
-    margin: 0;
-    margin-top: 200px;
+    gap:0;
+    background:#3fcece;
 }
 
-.current-score, .current-time, .home{
+.current-score{
     grid-area: current-score;
-    font-family: 'Raleway', sans-serif;
     font-weight: 800;
-    margin-bottom: 10px;
-    font-size: 32px;
+    font-size: 25px;
     text-align: center;
     color: white;
     width: 100%;
+    background:#3fcece;
 }
 
-#scoring, #time {
+#scoring{
     font-size: 65px;
     margin-top: 0px;
-    font-family: 'Luckiest Guy', cursive;
-    color: white;
+    color: #83ead9;
 }
 
-.restart {
-    grid-area: restart;
-    height: 200px;
-    color: white;
+.score-title{
+    margin-top: 70px;
+    margin-bottom: 0px;
 }
+
 
 .round-scores {
     grid-area: round-scores;
-    color: white;
+    color: black;
     width: 100%;
 }
 
@@ -66,86 +112,59 @@ body{
     color: white;
     width: 99%;
     height: 250px;
-    font-family: 'Raleway', sans-serif;
-    color: white;
+    background:#3fcece;
     text-align: center;
-    margin: 0;
+    margin-bottom: 100px;
     font-size: 40px;
-    cursor: pointer;
+    height: 100%;
 }
 
 .btn{
-    background: green;
+    background: white;
     font-size: 20px;
-    width: 300px;
+    width: 250px;
     font-weight: 800;
     transition: all .2s ease-in-out;
     padding: 5px 25px;
-    color: white;
+    color: #3fcece;
     font-size: 25px;
-    font-family: 'Raleway', sans-serif;
     cursor: pointer;
     border-radius: 4px;
     border: none;
     text-decoration: none;
     display: block;
-    margin: 15px; 
+    margin: 15px auto; 
 }
 
 .btn:hover {
     cursor: pointer;
     box-shadow: 0px 2px 5px 0px #2E86C1;
-    background: #32CD32;
+    background: #2E86C1;
     transform: scale(1.05);
 }
 
 .game-rules {
     font-size: 19px;
-    font-weight: 100;
+    font-weight: 400;
     margin-top: 0px;
+    margin-bottom: 50px;
     padding-left: 25px;
     padding-right: 25px;
+    color: white;
 }
 
 #rules {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 10px;
-}
-
-.welcome {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 1.4fr;
-    gap: 1px 1px;
-    grid-template-areas:
-      "."
-      "header";
-    grid-area: welcome;
-    border: 3px solid black;
     color: white;
-    font-size: 35px;
-    font-family: 'Luckiest Guy', cursive;
-    justify-items: center;
-    margin-top: 15px;
+    font-weight: 700;
 }
 
-h4 {
-    margin-top: 20px;
-    margin-bottom: 7.5px;
-}
+/* GAME */
 
-.header {
-    grid-area: header;
-    color: green;
-    font-size: 95px;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    font-family: 'Luckiest Guy', cursive;
-}
-
-#game {
-    grid-area: game;
-    border: 1px solid white;
+#game{
+    background: #f7f7f7;
+    position: relative;
 }
 
 .choice-container{
@@ -154,9 +173,8 @@ h4 {
     justify-content: center;
     margin: 20px auto;
     width: 80%;
-    border-radius: 4px;
-    background: #009ACD;
-    font-size: 20px;
+    border-radius: 10px;
+    background: white;
     min-width: 80px;
     transition: all .2s ease-in-out;
 }
@@ -164,73 +182,57 @@ h4 {
 .choice-container:hover {
     cursor: pointer;
     box-shadow: 0px 2px 5px 0px #2E86C1;
-    background: #00CED1;
+    background:#3fcece;
     transform: scale(1.05);
 }
 
 .choice-letter {
     padding: 5px 25px;
-    color: white;
-    font-size: 35px;
-    font-family: 'Luckiest Guy', cursive;
+    color: black;
+    font-size: 30px;
+    font-weight: bolder;
 }
 
 .choice-text {
     width: 100%;
-    color: white;
-    font-size: 35px;
-    font-family: 'Luckiest Guy', cursive;
+    color: black;
+    font-size: 25px;
+    letter-spacing: -0.5px;
 }
 
 h1{
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    font-size: 65px;
-    font-family: 'Raleway', sans-serif;
-    color: white;
-}
-
-.correct{
-    background: #61B329;
-}
-
-.correct:hover{
-    background:#76EE00;
-}
-
-.incorrect{
-    background:#ed1c24;
-}
-.incorrect:hover{
-    background: red;
+    margin: 30px;
+    font-size: 45px;
+    color: black;
+    letter-spacing: -0.5px;
+    width: 90%;
 }
 
 .question-number{
-    color: white;
-    font-size: 30px;
-    margin-top: 5px;
-    margin-left: 20px;
-    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    float: right;
+    color:#3fcece;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 10%;
     font-weight: 700;
+    right: 10px;
 }
 
 .round-title{
-    color: #009ACD;
-    font-size: 35px;
-    margin-top: 20px;
-    margin-left: 20px;
-    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    color:#3fcece;
+    font-size: 20px;
+    margin-left: 10%;
     font-weight: 700; 
+    left: 10px;
+    margin-top: 20px;
 }
 
 .artist{
     text-align: center;
-    font-size: 45px;
-    font-family: 'Raleway', sans-serif;
-    color: green;
-    margin: 0;
+    font-size: 35px;
+    color:#3fcece;
+    margin-top: 50px;
 }
-

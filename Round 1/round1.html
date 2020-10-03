@@ -11,28 +11,29 @@
 <body>
     <div class="grid-container">
         <div class="home">
-            <p id='rules'>The Rules</p>
-            <p class='game-rules'>How to Play: <br><br>Select the correct choice to the music question. There are 30 questions - 10 questions for each of the three rounds.</p>
-            <button id='start' class=btn>RESTART</button>
-            <button id='end' class='btn'>END GAME<button> 
+            <div class="round-scores">
+                <p id='rules'>The Rules</p>
+                <p class='game-rules'><span class='how-to'>How to Play: </span><br><br>Select the correct choice to the music question. There are 30 questions - 10 questions for each of the three rounds.</p>
+            </div>        
         </div>
         <div id="round-x">
-          <div class="current-score">
-              <p>
+            <div class="current-score">
+                <button id='start' class=btn>RESTART</button>
+                <button id='end' class='btn'>END GAME</button> 
+                <p class='score-title'>
                   Current Score
-              </p>
-              <h2 id="scoring">
+                </p>
+                <h2 id="scoring">
                     0
-              </h2>
+                </h2>
             </div>
-            <!-- <div class="round-scores">Round 1, Round 2, etc</div> -->
         </div>
         <div class="welcome">
-            <h4>Let's Play</h4>
+            <h4>LET'S PLAY</h4>
           <div class="header">GOT THE BEAT!</div>
         </div>
         <div id="game">
-            <div class="round-title">Round 1: Guess The </div>
+            <div class="round-title">Round 1: Guess The Artist</div>
             <div class="question-number"></div>
             <h1 id="question">Which artist performed the song</h1>
             <div class="choice-container">

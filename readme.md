@@ -66,4 +66,4 @@ Submitted a running version of game with no modal pop ups for correct and incorr
 Submitted a full running version of the game including all 3 rounds, varying questions, score incrementing, modal overlays and effects, and clean CSS design.
 
 ### Deployment
-This project is available at: http://jankey-q.surge.sh/
+This project is available at: https://camillebrown.github.io/Project1/.

@@ -6,21 +6,10 @@ const choices = Array.from(document.querySelectorAll('.choice-text'))
 const scoreText = document.querySelector('#scoring')
 const questionNum = document.querySelector('.question-number')
 const gameDIV = document.querySelector('#game')
-const modal = document.querySelector('.modal-overlay')
-let modalClose = document.querySelector('.modal-close')
-let iconSymbol = document.querySelector('.icon-symbol')
-let modalTitle = document.querySelector('.modal-title')
-let modalText = document.querySelector('.modal-content')
-let modalEnd = document.querySelector('.modal-end')
 let roundTitle = document.querySelector('.round-title')
-
-
 let currentQuestion = {}
 let acceptingAnswers = true
 let questionCounter = 0
-let availableQuestionsR1 = []
-let availableQuestionsR2 = []
-let availableQuestionsR3 = []
 const score_pointsR1 = 10
 const score_pointsR2 = 30
 const score_pointsR3 = 50
